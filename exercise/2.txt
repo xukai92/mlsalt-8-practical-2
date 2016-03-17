@@ -1,0 +1,30 @@
+2.(a) before
+# of states                                       5
+# of arcs                                         56
+2.(a) after
+# of states                                       2
+# of arcs                                         53
+2.(b) before
+# of states                                       5
+# of arcs                                         106
+2.(b) after
+# of states                                       4
+# of arcs                                         130
+2.(c) before
+# of states                                       3
+# of arcs                                         78
+2.(c) after
+# of states                                       3
+# of arcs                                         78
+2.(d) before
+# of states                                       7
+# of arcs                                         158
+2.(d) after
+# of states                                       4
+# of arcs                                         180
+2.(e) before
+# of states                                       11
+# of arcs                                         215
+2.(e) after
+# of states                                       4
+# of arcs                                         208
