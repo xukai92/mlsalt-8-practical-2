@@ -72,11 +72,13 @@ os.system('fstdraw --acceptor --portrait --nodesep=0.01 --ranksep=1.0 --height=1
 os.system('dot -Tps 2d.dot > 2d.ps')
 
 # (e) Accepts a word that is capitalized or does not contain an a without using fstunion.
-os.system('fstdifference 2d3.fst 2c.fst 2e1.fst')
-os.system('fstrmepsilon 2e1.fst | fstdeterminize | fstminimize - 2e.fst')
+os.system('fstarcsort --sort_type=ilabel 1c.fst 2e1.fst')
+os.system('fstdifference 2d3.fst 2e1.fst 2e2.fst')
+os.system('fstintersect 2e2.fst 1d.fst 2e3.fst')
+os.system('fstrmepsilon 2e3.fst | fstdeterminize | fstminimize - 2e.fst')
 
 out += '2.(e) before\n'
-f = os.popen('fstinfo 2e1.fst | head -n 6 | tail -n 2')
+f = os.popen('fstinfo 2e3.fst | head -n 6 | tail -n 2')
 out += f.read()
 out += '2.(e) after\n'
 f = os.popen('fstinfo 2e.fst | head -n 6 | tail -n 2')
