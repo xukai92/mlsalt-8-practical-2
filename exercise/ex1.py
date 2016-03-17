@@ -35,7 +35,7 @@ os.system('dot -Tps 1b.dot > 1b.ps')
 
 # (c) Accepts a capitalized word (where a word is a string of letters in L excluding space and a capitalized word has its initial letter uppercase and remaining letters lowercase).
 f_out, out = open('1c.txt', 'w'), ''
-for s in L:
+for s in reversed(L):   # manipulate capital letter first s.t. the 0 is initial state
     if s != '<eps>' and s != '<space>':
         if s.islower():
             out += '1 1 {s} {s}\n'.format(s=s)
@@ -51,11 +51,11 @@ os.system('dot -Tps 1c.dot > 1c.ps')
 
 # (d) Accepts a word containing the letter a.
 f_out, out = open('1d.txt', 'w'), ''
+out += '0 1 a a\n'
 for s in L:
     if s != '<eps>' and s != '<space>':
         if s != 'a':
-        out += '1 1 {s} {s}\n'.format(s=s)
-out += '0 1 a a\n'
+            out += '1 1 {s} {s}\n'.format(s=s)
 out += '1'
 f_out.write(out)
 f_out.close()

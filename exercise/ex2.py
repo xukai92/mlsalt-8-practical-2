@@ -11,7 +11,13 @@ import os
 os.system('fstconcat 1c.fst 1b.fst 2a1.fst')
 os.system('fstclosure 2a1.fst 2a.fst')
 
+os.system('fstdraw --acceptor --portrait --nodesep=0.01 --height=15 --isymbols=table1.txt --osymbols=table1.txt 2a.fst 2a.dot')
+os.system('dot -Tps 2a.dot > 2a.ps')
+
 # (b) Accepts a word beginning or ending in a capitalized letter.
+os.system('fstreverse 1c.fst 2b1.fst')
+os.system('fstunion 1c.fst 2b1.fst 2b2.fst')
+os.system('fstrmepsilon 2b2.fst | fstdeterminize | fstminimize - 2b.fst')
 
 # (c) Accepts a word that is capitalized and contains the letter a.
 
