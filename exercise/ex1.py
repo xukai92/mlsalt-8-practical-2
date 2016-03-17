@@ -1,11 +1,6 @@
 import os
 
 
-# env
-os.system('HIFST=/home/wjb31/src/hifst.mlsalt-cpu1.5Nov15/ucam-smt/')
-os.system('export PATH=$PATH:$HIFST/bin/')
-os.system('export PATH=$PATH:$HIFST/externals/openfst-1.5.0/INSTALL_DIR/bin/')
-
 # read L
 L = []
 f_in = open('table1.txt', 'r')
@@ -59,7 +54,6 @@ f_out, out = open('1d.txt', 'w'), ''
 for s in L:
     if s != '<eps>' and s != '<space>':
         if s != 'a':
-            out += '0 0 {s} {s}\n'.format(s=s)
         out += '1 1 {s} {s}\n'.format(s=s)
 out += '0 1 a a\n'
 out += '1'
@@ -69,3 +63,4 @@ f_out.close()
 os.system('fstcompile --isymbols=table1.txt --osymbols=table1.txt 1d.txt 1d.fst')
 os.system('fstdraw --acceptor --portrait --nodesep=0.01 --height=20 --isymbols=table1.txt --osymbols=table1.txt 1d.fst 1d.dot')
 os.system('dot -Tps 1d.dot > 1d.ps')
+os.system('fstconcat 1c.fst 1b.fst 2a1.fst')
