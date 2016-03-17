@@ -1,0 +1,21 @@
+digraph FST {
+rankdir = LR;
+size = "8.5,11";
+label = "";
+center = 1;
+orientation = Landscape;
+ranksep = "0.4";
+nodesep = "0.25";
+0 [label = "0", shape = circle, style = bold, fontsize = 14]
+	0 -> 1 [label = "0:ten", fontsize = 14];
+	0 -> 1 [label = "1:eleven", fontsize = 14];
+	0 -> 1 [label = "2:twelve", fontsize = 14];
+	0 -> 1 [label = "3:thirteen", fontsize = 14];
+	0 -> 1 [label = "4:fourteen", fontsize = 14];
+	0 -> 1 [label = "5:fifteen", fontsize = 14];
+	0 -> 1 [label = "6:sixteen", fontsize = 14];
+	0 -> 1 [label = "7:seventeen", fontsize = 14];
+	0 -> 1 [label = "8:eighteen", fontsize = 14];
+	0 -> 1 [label = "9:nineteen", fontsize = 14];
+1 [label = "1", shape = doublecircle, style = solid, fontsize = 14]
+}
