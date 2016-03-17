@@ -55,7 +55,8 @@ out += '0 1 a a\n'
 for s in L:
     if s != '<eps>' and s != '<space>':
         if s != 'a':
-            out += '1 1 {s} {s}\n'.format(s=s)
+            out += '0 1 {s} {s}\n'.format(s=s)
+        out += '1 1 {s} {s}\n'.format(s=s)
 out += '1'
 f_out.write(out)
 f_out.close()
