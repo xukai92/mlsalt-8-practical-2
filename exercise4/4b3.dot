@@ -1,0 +1,44 @@
+digraph FST {
+rankdir = BT;
+size = "8.5,10";
+label = "";
+center = 1;
+orientation = Portrait;
+ranksep = "0.4";
+nodesep = "0.01";
+0 [label = "0", shape = circle, style = bold, fontsize = 29]
+	0 -> 1 [label = "z", fontsize = 29];
+1 [label = "1", shape = circle, style = solid, fontsize = 29]
+	1 -> 2 [label = "l", fontsize = 29];
+2 [label = "2", shape = circle, style = solid, fontsize = 29]
+	2 -> 3 [label = "<space>", fontsize = 29];
+3 [label = "3", shape = circle, style = solid, fontsize = 29]
+	3 -> 4 [label = "f", fontsize = 29];
+4 [label = "4", shape = circle, style = solid, fontsize = 29]
+	4 -> 5 [label = "r", fontsize = 29];
+5 [label = "5", shape = circle, style = solid, fontsize = 29]
+	5 -> 6 [label = "p", fontsize = 29];
+6 [label = "6", shape = circle, style = solid, fontsize = 29]
+	6 -> 7 [label = "e", fontsize = 29];
+7 [label = "7", shape = circle, style = solid, fontsize = 29]
+	7 -> 8 [label = "r", fontsize = 29];
+8 [label = "8", shape = circle, style = solid, fontsize = 29]
+	8 -> 9 [label = "g", fontsize = 29];
+9 [label = "9", shape = circle, style = solid, fontsize = 29]
+	9 -> 10 [label = "<space>", fontsize = 29];
+10 [label = "10", shape = circle, style = solid, fontsize = 29]
+	10 -> 11 [label = "z", fontsize = 29];
+11 [label = "11", shape = circle, style = solid, fontsize = 29]
+	11 -> 12 [label = "r", fontsize = 29];
+12 [label = "12", shape = circle, style = solid, fontsize = 29]
+	12 -> 13 [label = "f", fontsize = 29];
+13 [label = "13", shape = circle, style = solid, fontsize = 29]
+	13 -> 14 [label = "f", fontsize = 29];
+14 [label = "14", shape = circle, style = solid, fontsize = 29]
+	14 -> 15 [label = "n", fontsize = 29];
+15 [label = "15", shape = circle, style = solid, fontsize = 29]
+	15 -> 16 [label = "t", fontsize = 29];
+16 [label = "16", shape = circle, style = solid, fontsize = 29]
+	16 -> 17 [label = "r", fontsize = 29];
+17 [label = "17", shape = doublecircle, style = solid, fontsize = 29]
+}
