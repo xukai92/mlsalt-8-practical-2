@@ -1,4 +1,4 @@
-# of states                                       366
-# of arcs                                         649
+# of states                                       1099
+# of arcs                                         2195
 # of states                                       366
 # of arcs                                         649
